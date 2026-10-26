@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Quark - Create. Share. Play.</title>
+  <style>
+    /* Prevent default document margins and block unwanted scrolling */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000000;
+    }
+
+    /* Wrap the game viewport and hide any content pushed outside bounds */
+    .viewport-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Stretch the container size and shift it horizontally to hide the sidebar */
+    .game-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 135vw; /* Expands width to accommodate the off-screen shift */
+      height: 100vh;
+      border: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="viewport-mask">
+    <div class="game-container">
+      <iframe 
+        src="https://websim.com/@thisis/quark/1" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; webcam; microphone; midi; pointer-lock"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>
+
